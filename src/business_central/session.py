@@ -40,7 +40,7 @@ class BusinessCentralSession:
             logger.error(f"Failed to connect to {self.base_url}. Message: {str(e)}")
             raise ConnectionError(f"Failed to connect to {self.base_url}") from e
 
-    def _build_query_url(self, service_name: str, filters: str = "", columns: list = None) -> str:
+    def _build_query_url(self, service_name: str, filters: str = None, columns: list = None) -> str:
         """
         Build the query URL for the API endpoint.
         :param service_name: The name of the API service or endpoint.
