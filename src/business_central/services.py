@@ -36,15 +36,6 @@ class BaseService:
             as_dataframe=as_dataframe
         )
 
-    def get_sample(self, as_dataframe: bool = False) -> list | pd.DataFrame:
-        """
-        Fetch a sample of data from the API endpoint.
-        :param as_dataframe: Return results as a pandas DataFrame if True, otherwise as a list.
-        :return: List or DataFrame of sample data.
-        """
-
-        return self.get_data(filters="top=10", as_dataframe=as_dataframe)
-
 
 class CustomerService(BaseService):
     SERVICE_NAME = "customers_list"
