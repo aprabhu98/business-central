@@ -43,7 +43,7 @@ class BaseService:
         :return: List or DataFrame of sample data.
         """
 
-        return self.get_data(filters="?$top=10", as_dataframe=as_dataframe)
+        return self.get_data(filters="top=10", as_dataframe=as_dataframe)
 
 
 class CustomerService(BaseService):
